@@ -1,0 +1,17 @@
+.info{
+	text-align: center;
+}
+
+.tab{
+	display: none;
+	margin: 10px;
+}
+
+.active{
+	display: block!important;
+}
+
+.tabs-buttons{
+	padding: 10px;
+	text-align: center;
+}

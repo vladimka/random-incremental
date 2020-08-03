@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Random Incremental</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="info">
+		<h1>Balance: <span id="balance">0</span></h1>
+		<h3>
+			Random(<span id="min_rand">1</span>, <span id="max_rand">5</span>) <span id="multipliers"></span>
+		</h3>
+		<button onclick="generate()">Generate</button>
+	</div>
+	<div class="tabs-buttons">
+		<button onclick="setTab('upgrades')">Upgrades</button>
+		<button onclick="setTab('options')">Options</button>
+	</div>
+	<div class="tabs">
+		<div class="tab upgrades active">
+			<button onclick="upMin()">Upgrade minimum - <span id="min_rand_upgrade_cost">0</span></button>
+			<button onclick="upMax()">Upgrade maximum - <span id="max_rand_upgrade_cost">0</span></button>
+			<button onclick="upMul()">Multiply multiplier by 2 - Cost <span id="mulcost">0</span>. Current multiplier <span id="currmul">1</span></button>
+			<button id="buyag" onclick="buyAg()">Buy Auto Generator - 10000</button>
+			<button onclick="upAg()" id="upag" style="display: none;">Upgrade Auto Generator <span id="upagcost">0</span></button>
+			<button id="agOnOff" onclick="switchAutoGenerator()">Auto Generator Off</button>
+			<button id="gpsBtn" onclick="gpsUp()">Upgrade count of auto generations per second. Cost - <span id="gpscost">0</span>. Current - <span id="gps">1</span></button>
+		</div>
+		<div class="tab options">
+			<button onclick="hardReset()">Hard Reset</button>
+			<button onclick="saveFunction()">Save</button>
+			<button onclick="load()">Load</button>
+			<button onclick="exportSave()">Export Save</button>
+			<button onclick="importSave()">Import Save</button>
+		</div>
+	</div>
+	<script src="scripts/break_infinity.min.js"></script>
+	<script src="scripts/save.js"></script>
+	<script src="scripts/ui.js"></script>
+	<script src="scripts/main.js"></script>
+</body>
+</html>
